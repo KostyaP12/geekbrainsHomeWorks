@@ -20,15 +20,15 @@ public class HomeWork {
         return a * (b + (c / d));
     }
 
-    private static boolean truthCheck (int firstNumber , int secondNumber){
+    private static boolean truthCheck(int firstNumber , int secondNumber){
           return  ((firstNumber + secondNumber) > 10 && (firstNumber + secondNumber) <= 20);
     }
 
-    private static void positiveOrNegative (int number){
+    private static void positiveOrNegative(int number){
         System.out.println((number >= 0)? "Положительное" : "Отрицательное");
     }
 
-    private static String stringConcatenation (String name){
+    private static String stringConcatenation(String name){
         return "Привет " + name;
     }
 
