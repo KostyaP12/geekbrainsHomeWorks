@@ -22,7 +22,7 @@ public class HemeWork {
         //Задание 5
         int[][] square = new int[9][9];
         System.out.println("Задание 5. Заполнить в квадратном массиве диагональные элементы единицами");
-        square = diagonalInSquare(square);
+        square = diagonalInSquare(square); // метод возращает многомерный массив, но здесь массив не используется, выводить его через Arrays.toString не стал потому что выводит ссылки.
         //Задание 6
         int[] arraySixthTask = {1, 2, 3, 16, 0, 5, 5, 2, 3, 2, 9, 11};
         boolean answer = checkBalance(arraySixthTask);
