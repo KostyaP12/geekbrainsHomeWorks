@@ -2,15 +2,14 @@ package ru.geekbrains.java_level_a.lesson_b;
 
 import java.util.Arrays;
 
-public class HemeWork {
+public class HomeWork {
     public static void main(String[] arg) {
         //Задание 1
         int[] arrayFirstTask = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
         System.out.println("Задание 1. Нам данн целочисленный массив " + Arrays.toString(arrayFirstTask) + "После конвератции массив: " + Arrays.toString(changeOneAndZero(arrayFirstTask)));
         //Задание 2
         int[] arraySecondTask = new int[8];
-        int[] arrayOfGivenValues = {1, 4, 7, 10, 13, 16, 19, 22};
-        System.out.println("Задание 2. Пустой массив необходимо заполнить int значениями 1, 4, 7, 10, 13, 16, 19, 22. Массив:" + Arrays.toString(fillingTheArray(arraySecondTask, arrayOfGivenValues)));
+        System.out.println("Задание 2. Пустой массив необходимо заполнить int значениями 1, 4, 7, 10, 13, 16, 19, 22. Массив:" + Arrays.toString(fillingTheArray(arraySecondTask)));
         //Задание 3
         int[] arrayThirdTask = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         System.out.println("Задание 3. Нам данн целочисленный массив" + Arrays.toString(arrayThirdTask) + "Необходимо умножить все числа меньше 6 на 2 после умножений массив будет выглядить:" + Arrays.toString(multiplyingElementsInAnArray(arrayThirdTask)));
@@ -44,9 +43,10 @@ public class HemeWork {
         return array;
     }
 
-    private static int[] fillingTheArray(int[] arraySecondTask, int[] arrayOfGivenValues) {
-        for (int i = 0; i < arrayOfGivenValues.length; i++) {
-            arraySecondTask[i] = arrayOfGivenValues[i];
+    private static int[] fillingTheArray(int[] arraySecondTask) {
+        arraySecondTask[0] = 1;
+        for (int i = 1; i < arraySecondTask.length; i++){
+            arraySecondTask[i] = arraySecondTask[i - 1] + 3;
         }
         return arraySecondTask;
     }
