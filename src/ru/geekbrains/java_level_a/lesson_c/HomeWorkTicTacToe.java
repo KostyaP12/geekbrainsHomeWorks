@@ -50,7 +50,7 @@ public class HomeWorkTicTacToe {
         int x;
         int y;
         do {
-            System.out.print("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ С…РѕРґР° X Рё Y (РѕС‚ 1 РґРѕ 3) С‡РµСЂРµР· РїСЂРѕР±РµР» >>> ");
+            System.out.print("Введите координаты хода X и Y (от 1 до 3) через пробел >>> ");
             x = SCANNER.nextInt() - 1;
             y = SCANNER.nextInt() - 1;
         } while (!isCellValid(x, y) || !isCellEmpty(x, y));
