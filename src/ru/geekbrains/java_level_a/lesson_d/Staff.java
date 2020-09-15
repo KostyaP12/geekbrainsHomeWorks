@@ -3,7 +3,7 @@ package ru.geekbrains.java_level_a.lesson_d;
 public class Staff {
     private String fullName;
     private int salary;
-    private int birthDay;
+    private int birthYear;
 
     public String getFullName() {
         return fullName;
@@ -13,13 +13,13 @@ public class Staff {
         return salary;
     }
 
-    public int getBirthDay() {
-        return birthDay;
+    public int getBirthYear() {
+        return birthYear;
     }
 
-    Staff(String fullName, int salary, int birthDay){
+    Staff(String fullName, int salary, int age){
         this.fullName = fullName;
         this.salary = salary;
-        this.birthDay = birthDay;
+        this.birthYear = age;
     }
 }
