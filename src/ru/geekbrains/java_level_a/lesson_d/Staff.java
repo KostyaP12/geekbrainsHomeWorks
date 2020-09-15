@@ -1,5 +1,7 @@
 package ru.geekbrains.java_level_a.lesson_d;
 
+import java.util.Calendar;
+
 public class Staff {
     private String fullName;
     private int salary;
@@ -13,13 +15,13 @@ public class Staff {
         return salary;
     }
 
-    public int getBirthYear() {
-        return birthYear;
+    public int getAge() {
+        return Calendar.YEAR - this.birthYear;
     }
 
     Staff(String fullName, int salary, int age){
         this.fullName = fullName;
         this.salary = salary;
-        this.birthYear = age;
+        this.birthYear = Calendar.YEAR - age;
     }
 }
