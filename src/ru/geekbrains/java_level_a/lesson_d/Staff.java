@@ -19,6 +19,10 @@ public class Staff {
         return Calendar.YEAR - this.birthYear;
     }
 
+    public void setSalary(int salary) {
+        this.salary += salary;
+    }
+
     Staff(String fullName, int salary, int age){
         this.fullName = fullName;
         this.salary = salary;
