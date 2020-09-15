@@ -5,7 +5,19 @@ public class Staff {
     private int salary;
     private int birthDay;
 
-    Staff(String fullName,int salary, int birthDay){
+    public String getFullName() {
+        return fullName;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public int getBirthDay() {
+        return birthDay;
+    }
+
+    Staff(String fullName, int salary, int birthDay){
         this.fullName = fullName;
         this.salary = salary;
         this.birthDay = birthDay;
