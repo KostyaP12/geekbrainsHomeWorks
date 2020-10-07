@@ -1,4 +1,4 @@
-package ru.geekbrains.java_two.lesson_a.online;
+package ru.geekbrains.java_level_b.lesson_a;
 
 import javax.swing.*;
 import java.awt.*;
@@ -36,15 +36,16 @@ public class MainCircles extends JFrame {
         }
     }
 
-    public void onDrawFrame(GameCanvas canvas, Graphics g, float deltaTime) {
-        update(canvas, deltaTime);
+    public void onDrawFrame(GameCanvas canvas, Graphics g, float deltaTime, Background background) {
+        update(canvas, deltaTime, background);
         render(canvas, g);
     }
 
-    private void update(GameCanvas canvas, float deltaTime) {
+    private void update(GameCanvas canvas, float deltaTime, Background background) {
         for (int i = 0; i < sprites.length; i++) {
             sprites[i].update(canvas, deltaTime);
         }
+        background.update(canvas,deltaTime);
     }
 
     private void render(GameCanvas canvas, Graphics g) {

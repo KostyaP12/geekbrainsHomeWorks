@@ -1,4 +1,4 @@
-package ru.geekbrains.java_two.lesson_a.online;
+package ru.geekbrains.java_level_b.lesson_a;
 
 import java.awt.*;
 
