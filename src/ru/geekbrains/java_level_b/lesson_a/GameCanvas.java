@@ -1,4 +1,4 @@
-package ru.geekbrains.java_two.lesson_a.online;
+package ru.geekbrains.java_level_b.lesson_a;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,6 +8,7 @@ public class GameCanvas extends JPanel {
     private MainCircles controller;
     long lastFrameTime;
     private static final int FPS_SLEEP_TIME = 17;
+    Background background = new Background();
 
     GameCanvas(MainCircles controller) {
         this.controller = controller;
@@ -19,14 +20,14 @@ public class GameCanvas extends JPanel {
         super.paintComponent(g);
         long currentTime = System.nanoTime();
         float deltaTime = (currentTime - lastFrameTime) * 0.000000001f;
-        controller.onDrawFrame(this, g, deltaTime);
+        controller.onDrawFrame(this, g, deltaTime, background);
         lastFrameTime = currentTime;
         try {
             Thread.sleep(FPS_SLEEP_TIME);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        repaint();                              // }
+        repaint();
     }
 
     public int getLeft() { return 0; }
